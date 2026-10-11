@@ -3,12 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Projet</title>
+    <title>Gestion des Contacts</title>
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-    <h1>Bienvenue sur mon projet</h1>
-    <p>Créé depuis Termux sur Android.</p>
+    <div class="container">
+        <h1>Gestion des Contacts</h1>
+
+        <!-- Formulaire de saisie -->
+        <form id="contactForm">
+            <div class="input-group">
+                <input type="text" id="nom" placeholder="Nom" required>
+            </div>
+            <div class="input-group">
+                <input type="text" id="numero" placeholder="Numéro" required>
+            </div>
+            <div class="input-group">
+                <input type="text" id="adresse" placeholder="Adresse" required>
+            </div>
+            <button type="submit">Ajouter</button>
+        </form>
+
+        <!-- Tableau des contacts -->
+        <table id="contactTable">
+            <thead>
+                <tr>
+                    <th>Nom</th>
+                    <th>Numéro</th>
+                    <th>Adresse</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sekou Diarra</td>
+                    <td>+223 XX XX XX XX</td>
+                    <td>Mali</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <script src="../js/script.js"></script>
 </body>
