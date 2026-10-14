@@ -1,19 +1,55 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>To Do List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire HTML, CSS, JS</title>
+    <!-- Lien vers le fichier CSS externe -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <div class="container">
-        <h2>To Do List</h2>
-        <div class="input-group">
-            <input type="text" id="taskInput" placeholder="Add a new task...">
-            <button onclick="addTask()">Add</button>
-        </div>
-        <ul id="taskList"></ul>
+        <h2>Inscription</h2>
+        <form id="monFormulaire">
+            <div class="form-group">
+                <label for="nom">Nom complet :</label>
+                <input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Adresse Email :</label>
+                <input type="email" id="email" name="email" placeholder="exemple@email.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Mot de passe :</label>
+                <input type="password" id="password" name="password" placeholder="••••••••" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dateNais">Date de naissance :</label>
+                <input type="date" id="dateNais" name="dateNais">
+            </div>
+
+            <div class="form-group inline-group">
+                <label for="couleurFav">Couleur favorite :</label>
+                <input type="color" id="couleurFav" name="couleurFav" value="#0056b3">
+            </div>
+
+            <div class="form-group">
+                <label for="niveau">Niveau (1 à 10) :</label>
+                <input type="range" id="niveau" name="niveau" min="1" max="10" value="5">
+                <span style="text-align: center; font-weight: bold; margin-top: 5px;" id="valNiveau">5</span>
+            </div>
+
+            <button type="submit">Valider</button>
+        </form>
+
+        <div id="resultat"></div>
     </div>
+
+    <!-- Lien vers le fichier JavaScript externe -->
     <script src="script.js"></script>
 </body>
 </html>
